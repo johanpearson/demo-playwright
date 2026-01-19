@@ -1,0 +1,22 @@
+{
+  "name": "demo-playwright",
+  "version": "1.0.0",
+  "description": "Playwright POM framework with multi-user support",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "setup:auth": "playwright test --project=setup"
+  },
+  "keywords": ["playwright", "testing", "pom", "typescript"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  }
+}
