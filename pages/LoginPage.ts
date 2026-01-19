@@ -14,6 +14,10 @@ export class LoginPage extends BasePage {
     super(page);
     
     // Define locators for login page elements
+    // NOTE: These are generic fallback locators for demonstration purposes.
+    // In a real project, replace these with application-specific selectors,
+    // preferably using data-testid attributes for stability:
+    // Example: this.usernameInput = page.locator('[data-testid="username-input"]');
     this.usernameInput = page.locator('input[name="username"], input[id="username"], input[type="email"]').first();
     this.passwordInput = page.locator('input[name="password"], input[id="password"], input[type="password"]').first();
     this.loginButton = page.locator('button[type="submit"], button:has-text("Login"), button:has-text("Sign in")').first();

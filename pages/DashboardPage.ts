@@ -14,6 +14,10 @@ export class DashboardPage extends BasePage {
     super(page);
     
     // Define locators for dashboard elements
+    // NOTE: These are generic fallback locators for demonstration purposes.
+    // In a real project, replace these with application-specific selectors,
+    // preferably using data-testid attributes for stability:
+    // Example: this.welcomeMessage = page.locator('[data-testid="welcome-message"]');
     this.welcomeMessage = page.locator('.welcome-message, h1, [data-testid="welcome"]').first();
     this.userProfile = page.locator('.user-profile, [data-testid="user-profile"], .profile').first();
     this.logoutButton = page.locator('button:has-text("Logout"), button:has-text("Sign out"), a:has-text("Logout")').first();
