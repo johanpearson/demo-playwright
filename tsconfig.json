@@ -9,7 +9,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "outDir": "./dist",
-    "rootDir": "./",
+    "rootDir": "./", // Root is './' as this is a test-only project with tests, pages, and utils at root
     "types": ["node", "@playwright/test"]
   },
   "include": ["**/*.ts"],

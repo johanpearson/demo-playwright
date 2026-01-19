@@ -55,7 +55,8 @@ export class MultiUserHelper {
   static async waitForConditionOnAllPages(
     pages: Page[],
     condition: (page: Page) => Promise<boolean>,
-    timeout: number = 5000
+    timeout: number = 5000,
+    pollInterval: number = 100
   ): Promise<boolean> {
     const startTime = Date.now();
     
@@ -68,7 +69,7 @@ export class MultiUserHelper {
         return true;
       }
       
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, pollInterval));
     }
     
     return false;
